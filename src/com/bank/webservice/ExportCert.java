@@ -75,9 +75,12 @@ public class ExportCert {
     public static void main(String args[]) throws Exception {  
           
         String keyStoreType = "JKS";  
-        String keystoreFile = "E:/tool/merchant.jks";  
-        //  String keystoreFile = "C:/Documents and Settings/zhao/.keystore";  
-        String password = "changeit";  
+       String keystoreFile = "E:/tool/merchant.jks";  
+      //   String keystoreFile = "c:/merchant.jks";  
+      
+      String password = "changeit";  
+       //   String password = "031115";  
+        
           
         KeyStore keystore = KeyStore.getInstance(keyStoreType);  
         keystore.load(new FileInputStream(new File(keystoreFile)), password.toCharArray());  

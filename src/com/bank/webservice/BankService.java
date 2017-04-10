@@ -14,13 +14,15 @@ public class BankService {
 	  public String sayHello (String name){  
 	        return name+"к╣ак:hello!";  
 	    }  
-	  
+	//  private   String keystoreFile = "D:/merchant.jks";   
+	  private   String keystoreFile = "D:/Service/apache-tomcat-7.0.77/merchant.jks";   
+	  private   String password = "changeit";  
 	  public   Boolean JavaRsaVerify(String orig,String sign) throws Exception {
 	    	
     	  String keyStoreType = "JKS";  
-       String keystoreFile = "D:/merchant.jks";   
+     
     
-          String password = "changeit";  
+     
             
           KeyStore keystore = KeyStore.getInstance(keyStoreType);  
           keystore.load(new FileInputStream(new File(keystoreFile)), password.toCharArray());  
@@ -47,10 +49,7 @@ public class BankService {
 	  public   Boolean JavaRsaVerifyDecode(String orig,String sign) throws Exception {
 	    	
     	  String keyStoreType = "JKS";  
-       String keystoreFile = "D:/merchant.jks";   
-    
-          String password = "changeit";  
-            
+       
           KeyStore keystore = KeyStore.getInstance(keyStoreType);  
           keystore.load(new FileInputStream(new File(keystoreFile)), password.toCharArray());  
             

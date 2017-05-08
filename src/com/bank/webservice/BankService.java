@@ -21,7 +21,6 @@ public class BankService {
 	    	
     	  String keyStoreType = "JKS";  
      
-    
      
             
           KeyStore keystore = KeyStore.getInstance(keyStoreType);  
